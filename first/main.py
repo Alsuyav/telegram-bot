@@ -4,13 +4,13 @@ from telebot import types
 import telebot
 resp: HTTPResponse = urllib.request.urlopen("https://google.ru")
 
-
+#сам бот
 bot = telebot.TeleBot('6266288635:AAHFkuMgS-WDrn_rt9sEKmAdZhyy_9DjZrs')
 
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    mess = f'Добрый день! <b>{message.from_user.first_name} <u>{message.from_user.last_name}</u></b>'
+    mess = f'Добрый день!!! <b>{message.from_user.first_name} <u>{message.from_user.last_name}</u></b>'
     bot.send_message(message.chat.id, mess, parse_mode='html')
 
 
