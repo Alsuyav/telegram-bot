@@ -39,12 +39,4 @@ def website(message):
     bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)
 
 
-# @bot.message_handler(commands=['help'])
-# def website(message):
-#     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-#     website = types.KeyboardButton('Веб-сайт')
-#     start = types.KeyboardButton('Старт')
-#     markup.add(website, start)
-#     bot.send_message(message.chat.id, 'Выберите пункт меню!', reply_markup=markup)
-
 bot.polling(none_stop=True)
